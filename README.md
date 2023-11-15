@@ -33,7 +33,7 @@ disponíveis.
 Por padrão a classe utiliza o ambiente de `produção`, caso deseje utilizar o ambiente de `sandbox` basta chamar o método `setProduction` e passar o valor `false`.
 
 ```php
-$cobrefacil = new CobreFacil($appId, $secret, false);
+$cobrefacil = new CobreFacil($appId, $secret);
 $cobrefacil->setProduction(false);
 ```
 
