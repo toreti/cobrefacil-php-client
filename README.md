@@ -5,7 +5,7 @@ Para ler a documentação da API acesse: https://developers.cobrefacil.com.br
 
 ## Pré requisitos
 
-1. PHP >= 7.1
+1. PHP >= 8.2.8
 2. cURL
 3. [Composer](http://getcomposer.org/)
 
