@@ -1,18 +1,12 @@
-FROM php:7.1-fpm
+FROM php:8.2.8-fpm
 
 # Arguments defined in docker-compose.yml
 ARG user
 ARG uid
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    git
-
 # Install Xdebug
-RUN pecl install xdebug-2.9.8
+RUN pecl install xdebug-3.2.2
 RUN docker-php-ext-enable xdebug
-RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/php.ini
-RUN echo "xdebug.remote_connect_back=1" >> /usr/local/etc/php/php.ini
 
 # Get latest Composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer
